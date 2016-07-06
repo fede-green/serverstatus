@@ -64,11 +64,20 @@ foreach($monitors->monitors as $monitors_arr){
   <div class="row">
   <?php
   if($pausedservers > 0){
+    ?>
+    <div class="page-header">
+      <h2>Servers Paused</h2>
+    </div>
+    <?php
     foreach($paused_what as $monitor){
       ?>
-      <div class="panel-warning">
-        <h3 class='panel-title'><?= $monitor->friendlyname ?></h3>
-        <div class='panel-body'><?= $monitor->url ?></div>
+      <div class="col-sm-4">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class='panel-title'><?= $monitor->friendlyname ?></h3>
+          </div>
+          <div class='panel-body'><?= $monitor->url ?></div>
+        </div>
       </div>
       <?php
     }
@@ -76,11 +85,20 @@ foreach($monitors->monitors as $monitors_arr){
   ?>
   <?php
   if($downservers > 0){
+    ?>
+    <div class="page-header">
+      <h2>Servers down</h2>
+    </div>
+    <?php
     foreach($down_what as $monitor){
       ?>
-      <div class="panel-danger">
-        <h3 class='panel-title'><?= $monitor->friendlyname ?></h3>
-        <div class='panel-body'><?= $monitor->url ?></div>
+      <div class="col-sm-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class='panel-title'><?= $monitor->friendlyname ?></h3>
+          </div>
+          <div class='panel-body'><?= $monitor->url ?></div>
+        </div>
       </div>
       <?php
     }
