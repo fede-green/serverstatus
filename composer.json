@@ -1,0 +1,14 @@
+{
+    "name": "wundercare/serverstatus",
+    "description": "The status of all of your uptimerobot monitors at a glance",
+    "require": {
+        "ma-ve/uptimerobot": "^1.0"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "federico prato",
+            "email": "federico.prato@wunderkraut.com"
+        }
+    ]
+}

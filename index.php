@@ -14,13 +14,11 @@
   </head>
   <body role="document">
 <?php
-require_once 'src/uptimerobot.php';
+require_once 'vendor/autoload.php';
+//require_once 'vendor/ma-ve/uptimerobot/src/UptimeRobot.php';
 require_once 'conf/config.php';
-$upRobot = new UptimeRobot();
 
-$upRobot::configure($api, 1);
-
-$upRobot->setFormat('json'); //Define the format of responses (json or xml)
+$upRobot = new \Mave\UptimeRobot\UptimeRobot($api);
 
 /**
  * Get monitors
